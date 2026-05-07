@@ -3,7 +3,7 @@ name: Bank Activity Notifier
 on:
   schedule:
     # 每天早上 3:00 (UTC 0)-->台灣時間下午 11:00 
-    - cron: '30 4 * * *'
+    - cron: '30 3 * * *'
   workflow_dispatch:
 
 jobs:
