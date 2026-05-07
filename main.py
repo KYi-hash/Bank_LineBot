@@ -33,7 +33,7 @@ def input_new_bank_data():
 ### Step 2: Data ###
 def Clean_Data():
     activity_date = input_new_bank_data()
-    today_date = "2026/05/06"
+    today_date = datetime.now().strftime("%Y/%m/%d")
 
     message_content = []
     for item in activity_date:
@@ -46,7 +46,6 @@ def Clean_Data():
     if message_content:
         message_content = "\n".join(message_content)
         message = f"新活動:{message_content}"
-        print(message)
     else:
         pass
 
