@@ -1,13 +1,14 @@
 # Version 3
 ##########################################################
 from selenium import webdriver
-from selenium.webdriver.safari.options import Options
+#from selenium.webdriver.safari.options import Options
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 import pandas as pd
 import requests
 import json
 import os
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 ##########################################################
 
 ### Step 1: Scraped ###
