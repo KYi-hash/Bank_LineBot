@@ -14,7 +14,7 @@ from datetime import datetime
 def input_new_bank_data():
     # 設定 Chrome 參數
     chrome_options = Options()
-    chrome_options.add_argument('--headless') # 不啟動實體視窗 (雲端必備)
+    chrome_options.add_argument('--headless') # 不啟動實體視窗 
     chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument('--disable-dev-shm-usage')
 
@@ -60,7 +60,6 @@ def Clean_Data():
 def send_line_official(message):
     url = "https://api.line.me/v2/bot/message/push"
     
-    # 填入你剛剛找到的兩串寶物
     token = os.getenv('LINE_TOKEN')
     user_id = os.getenv('LINE_USER_ID')
     
@@ -81,7 +80,7 @@ if __name__ == "__main__":
     # 執行 Step 1, 2
     msg_to_send = Clean_Data()
     
-    # 執行 Step 3：只有當 msg 有內容時才發送
+    # 執行 Step 3：只有 msg 有內容時才發送
     if msg_to_send:
         status = send_line_official(msg_to_send)
         if status == 200:
