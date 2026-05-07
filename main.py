@@ -47,7 +47,7 @@ def Clean_Data():
         message_content = "\n".join(message_content)
         message = f"新活動:{message_content}"
     else:
-        pass
+        message = "今天沒有新活動"
 
     return message
 
