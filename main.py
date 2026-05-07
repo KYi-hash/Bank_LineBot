@@ -12,9 +12,13 @@ from datetime import datetime
 
 ### Step 1: Scraped ###
 def input_new_bank_data():
-    options = Options()
-    options.add_argument("--headless")
-    driver = webdriver.Safari()
+    # 設定 Chrome 參數
+    chrome_options = Options()
+    chrome_options.add_argument('--headless') # 不啟動實體視窗 (雲端必備)
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--disable-dev-shm-usage')
+
+    driver = webdriver.Chrome(options=chrome_options)
     driver.get("https://www.nextbank.com.tw/announcement/45c1e31fa40000000285cadc56793797")
 
     scraped_data = []
